@@ -9,15 +9,15 @@ const text = fs.readFileSync(path.join(__dirname, '..', 'inputs', 'day1.txt'), '
 
 const part1 =  text.map(line => line
     .split("\n")
-    .reduce((acc, curr) => Number(acc) + Number(curr), 0))
+    .reduce((acc, curr) => +acc + +curr, 0))
     .sort((a, b) => a - b)
     .pop()
 
 console.log(part1)
 
-const part2 =  text.map(line=>line
+const part2 =  text.map(line => line
     .split("\n")
-    .reduce((acc, curr) => Number(acc) + Number(curr), 0))
+    .reduce((acc, curr) => +acc + +curr, 0))
     .sort((a, b) => a - b)
     .slice(-3)
     .reduce((a,b)=> a + b, 0)
