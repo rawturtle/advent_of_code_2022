@@ -1,0 +1,13 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "repository": "https://github.com/rawturtle/advent_of_code_2022.git",
+  "author": "rawturtle",
+  "license": "MIT",
+  "scripts": {
+    "1": "node dist/day1.js"
+  },
+  "dependencies": {
+    "@types/node": "16.11.9"
+  }
+}
