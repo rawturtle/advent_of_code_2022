@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 //https://adventofcode.com/2022/day/1
-
 const text = fs.readFileSync(path.join(__dirname, '..', 'inputs', 'day1.txt'), 'utf-8')
     .trim()
     .split('\n\n')

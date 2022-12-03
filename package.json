@@ -5,7 +5,9 @@
   "author": "rawturtle",
   "license": "MIT",
   "scripts": {
-    "1": "node dist/day1.js"
+    "1": "node dist/day1.js",
+    "2": "node dist/day2.js",
+    "3": "node dist/day3.js"
   },
   "dependencies": {
     "@types/node": "16.11.9"

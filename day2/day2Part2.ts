@@ -1,7 +1,6 @@
 import fs from 'fs';
 
 //https://adventofcode.com/2022/day/2
-
 const text = fs.readFileSync('../inputs/day2.txt', 'utf-8')
     .trim()
     .split('\r\n')
