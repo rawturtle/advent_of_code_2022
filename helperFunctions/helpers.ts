@@ -5,3 +5,13 @@ export function generateAlphabet() {
     const alphabetUpper = alphabet.map((x) => String.fromCharCode(x).toUpperCase());
     return [...alphabetLower, ...alphabetUpper]
 }
+
+
+function extractNumbers(text: string) {
+    return text.match(/\d+/g);
+}
+
+
+function extractNumbersIncludingDecimals(text: string) {
+    return text.match(/\d+(?:\.\d+)?/g);
+}
