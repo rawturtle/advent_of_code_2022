@@ -19,22 +19,25 @@ const instructions: string[][] = fullInstructions.map((line) => {
     return line.match(/\d+/g) as string[]
 })
 
-const stack: string[][] = [[],[],[],[],[],[],[],[],[],[]]
+function generateStack(): string[][] {
+    const stack: string[][] = [[],[],[],[],[],[],[],[],[],[]]
 
-for (let row = 0; row < rawHeaders.length-2; row++) {
-    let stackIndex = 0
-    for (let col = 1; col < rawHeaders[row].length; col += 4) {
-        stackIndex++
-        const createValue = rawHeaders[row].split('')[col]
-        if (alphabetArr.includes(createValue)) {
-            stack[stackIndex].unshift(createValue)
+    for (let row = 0; row < rawHeaders.length-2; row++) {
+        let stackIndex = 0
+        for (let col = 1; col < rawHeaders[row].length; col += 4) {
+            stackIndex++
+            const createValue = rawHeaders[row].split('')[col]
+            if (alphabetArr.includes(createValue)) {
+                stack[stackIndex].unshift(createValue)
+            }
         }
     }
+    return stack
 }
 
 function part1() {
-    const p1Stack = [...stack]
-    console.log(p1Stack)
+    const p1Stack = generateStack()
+
     instructions.forEach((line: string[]) => {
         let index = 0
         while (index < +line[0]) {
@@ -49,7 +52,7 @@ function part1() {
 }
 
 function part2() {
-    const p2Stack = [...stack]
+    const p2Stack = generateStack()
 
     instructions.forEach((line: string[]) => {
         const removed = p2Stack[+line[1]].splice(p2Stack[+line[1]].length - +line[0])
@@ -65,3 +68,5 @@ function part2() {
 part1()
 part2()
 
+//VJSFHWGFT
+//LCTQFBVZV
